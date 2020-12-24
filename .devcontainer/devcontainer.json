@@ -1,0 +1,23 @@
+{
+    "name": "Discovery Go",
+    "build": {
+        "context": "../",
+        "dockerfile": "../Dockerfile"
+    },
+
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
+    "workspaceFolder": "/workspace",
+
+    "settings": {
+        "files.eol": "\n",
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "go.useGoProxyToCheckForToolUpdates": true,
+        "go.inferGopath": false,
+        "go.useLanguageServer": true,
+    },
+
+    "extensions": [
+		"golang.go"
+	],
+
+}
